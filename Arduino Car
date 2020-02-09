@@ -1,0 +1,50 @@
+
+int M1A = 3 ;
+int M1B = 4;
+int M2A = 5 ;
+int M2B = 6;
+
+int ldr1 = 10;
+int ldr2 = 11;
+void setup() {
+  pinMode(M1A, INPUT);
+  pinMode(M1B, INPUT);
+  pinMode(M2A, INPUT);
+  pinMode(M2B, INPUT);
+  pinMode(ldr1, OUTPUT);
+  pinMode(ldr2, OUTPUT);
+  Serial.begin('9600');
+}
+void forward() {
+  analogWrite(M1A, 100 );
+  analogWrite(M1B, 0 );
+  analogWrite(M2A, 100 );
+  analogWrite(M2B, 0);
+}
+void backward() {
+  analogWrite(M1A, 0);
+  analogWrite(M1B, 100);
+  analogWrite(M2A, 0);
+  analogWrite(M2B, 100);
+}
+
+void turnleft() {
+  analogWrite(M1A, 100);
+  analogWrite(M1B, 0);
+  analogWrite(M2A, 0);
+  analogWrite(M2B, 0);
+}
+
+
+void turnright() {
+  analogWrite(M1A, 0);
+  analogWrite(M1B, 0);
+  analogWrite(M2A, 100);
+  analogWrite(M2B, 0);
+}
+void loop() {
+  Serial.print("LDR 1 has an output of " + String(digitalRead(ldr1)) +"   LDR 2 has output of " + String(digitalRead(ldr2)));
+  // put your main code here, to run repeatedly:
+  
+
+}
