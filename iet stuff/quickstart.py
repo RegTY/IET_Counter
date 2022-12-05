@@ -13,7 +13,7 @@ from time import sleep
 SCOPES = ['https://www.googleapis.com/auth/spreadsheets.readonly']
 
 # The ID and range of a sample spreadsheet.
-SAMPLE_SPREADSHEET_ID = '1u6pUPDFWZbnUDTIy4L-cwDK7-RHA9-_ze_j3tgoMf14'
+SAMPLE_SPREADSHEET_ID = ''
 SAMPLE_RANGE_NAME = 'A2:D'
 
 def main():
